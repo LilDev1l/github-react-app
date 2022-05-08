@@ -1,3 +1,4 @@
+/* reset */
 *,
 *::before,
 *::after {
@@ -17,6 +18,10 @@ li {
     list-style-type: none;
 }
 
+input {
+    outline: none;
+}
+
 img {
     vertical-align: top;
 }
@@ -29,4 +34,12 @@ h5,
 h6 {
     font-weight: inherit;
     font-size: inherit;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Inter;
 }
