@@ -22,7 +22,7 @@
 }
 
 .repositories__pagination {
-    align-self: end;
+    align-self: flex-end;
 }
 
 @media (max-width: 30em) {

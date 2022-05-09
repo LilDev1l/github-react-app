@@ -6,7 +6,7 @@
     align-items: center;
     gap: 1.14em;
     flex-wrap: wrap-reverse;
-    justify-content: end;
+    justify-content: flex-end;
 }
 .pagination__info {
 
