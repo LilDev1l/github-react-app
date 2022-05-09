@@ -1,0 +1,15 @@
+.repository {
+    background-color: #fff;
+    padding: 24px 32px;
+}
+.repository__tittle {
+    display: block;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.2em;
+    color: #0064EB;
+    margin: 0  0  0.67em 0
+}
+.repository__description {
+    line-height: 1.188em;
+}

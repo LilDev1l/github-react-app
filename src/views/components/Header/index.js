@@ -1,13 +1,17 @@
 import './style.css';
-import HeaderLogo from '../HeaderLogo';
-import HeaderSearch from '../HeaderSearch';
+import logo from './img/logo.svg';
+import Search from '../Search';
 
 function Header() {
     return (
         <div className="header">
             <div className="header__container">
-                <HeaderLogo/>
-                <HeaderSearch/>
+                <a href="#" className="header__logo">
+                    <img src={logo} alt="Logo"/>
+                </a>
+                <div className="header__search">
+                    <Search/>
+                </div>
             </div>
         </div>
     );

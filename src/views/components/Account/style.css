@@ -1,0 +1,26 @@
+.account {
+    height: 100%;
+    padding: 28px 0;
+}
+
+.account__container {
+    height: 100%;
+    display: flex;
+    column-gap: 85px;
+    padding: 0 30px;
+}
+
+.account__profile {
+    flex: 0 1 auto;
+}
+
+.account__repositories {
+    flex: 1 1 0.768%;
+}
+
+@media (max-width: 62em) {
+    .account__container {
+        row-gap: 30px;
+        flex-direction: column;
+    }
+}

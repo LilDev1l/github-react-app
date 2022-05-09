@@ -1,0 +1,38 @@
+.pagination {
+    font-size: 0.875em;
+    line-height: 1.5em;
+    color: #808080;
+    display: flex;
+    align-items: center;
+    gap: 1.14em;
+    flex-wrap: wrap-reverse;
+    justify-content: end;
+}
+.pagination__info {
+
+}
+.pagination__navigate {
+}
+.pagination__navigate_back {
+}
+.pagination__pages {
+    display: flex;
+    align-items: center;
+    column-gap: 1.14em;
+}
+.page {
+}
+.page__link {
+    color: #808080;
+}
+.page_current {
+    width: 1.5em;
+    background: #0064EB;
+    border-radius: 0.214em;
+    text-align: center;
+}
+.page_current a {
+    color: #fff;
+}
+.pagination__navigate_forward {
+}

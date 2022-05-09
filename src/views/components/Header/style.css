@@ -2,10 +2,18 @@
     flex: 0 0 auto;
     background: #0064EB;
 }
-
 .header__container {
-    /* 72px */
     min-height: 4.5em;
     display: flex;
     align-items: center;
+}
+.header__logo {
+    flex: 0 0 2.56em;
+}
+.header__logo img {
+    width: 100%;
+}
+.header__search {
+    flex: 1 1 auto;
+    margin: 0 0 0 1.375em;
 }

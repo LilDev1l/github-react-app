@@ -1,0 +1,26 @@
+.network-profile {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.network-profile__item {
+    display: flex;
+    align-items: center;
+    margin: 0  15px 0  0 ;
+}
+.network-profile__item:last-child {
+    margin: 0;
+}
+.network-profile__item_followers {
+}
+.network-profile__icon {
+    flex: 0 0 24px;
+}
+.network-profile__icon img {
+    width: 100%;
+}
+.network-profile__text {
+    line-height: 150%;
+}
+.network-profile__item_following {
+}

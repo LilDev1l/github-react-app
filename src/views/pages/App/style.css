@@ -9,6 +9,32 @@
     1314px = 1284 + 2*15;
     */
     max-width: 82.125rem;
-    padding: 0px 15px;
-    margin: 0px auto;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* PC */
+/* 1088px */
+@media (max-width: 68em) {
+    [class*="__container"] {
+    }
+}
+
+/* TABLET */
+/* 992px */
+@media (max-width: 62em) {
+    [class*="__container"] {
+    }
+}
+
+/* MOBILE */
+/* 768px */
+@media (max-width: 48em) {
+    [class*="__container"] {
+    }
+}
+
+/* MOBILE SMALL */
+/* 480px */
+@media (max-width: 30em) {
 }
