@@ -1,17 +1,18 @@
 import './style.css';
-import photo from './img/photo.png';
 import NetworkProfile from '../NetworkProfile';
 
-function Profile() {
+function Profile({user}) {
     return (
         <div className="profile">
             <div className="profile__photo">
-                <img src={photo} alt="Developer"/>
+                <img src={user.avatar_url} alt="Developer"/>
             </div>
-            <div className="profile__name">Dan Abramov</div>
-            <a href="https://github.com/gaearon" target="_blank" className="profile__link" rel="noreferrer">gaearon</a>
+            <div className="profile__name">{user.name}</div>
+            <a href={user.html_url} target="_blank" className="profile__link"
+               rel="noreferrer">{user.login}</a>
             <div className="profile__network">
-                <NetworkProfile/>
+                <NetworkProfile numberFollowers={user.followers}
+                                numberFollowing={user.following}/>
             </div>
         </div>
     );

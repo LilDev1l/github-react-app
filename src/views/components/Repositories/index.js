@@ -2,17 +2,22 @@ import './style.css';
 import Repository from '../Repository';
 import Pagination from '../Pagination';
 
-function Repositories() {
+function Repositories({repos, totalRepos}) {
     return (
         <div className="repositories">
-            <div className="repositories__tittle">Repositories (249)</div>
+            <div className="repositories__tittle">Repositories ({totalRepos})</div>
             <ul className="repositories__list">
-                <li className="repositories__item">
-                    <Repository/>
-                </li>
+                {
+                    repos.map((repo) => {
+                            return <li className="repositories__item" key={repo.id}>
+                                <Repository repo={repo}/>
+                            </li>
+                        }
+                    )
+                }
             </ul>
             <div className="repositories__pagination">
-                <Pagination/>
+                <Pagination totalRepos={totalRepos}/>
             </div>
         </div>
     );

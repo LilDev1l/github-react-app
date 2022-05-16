@@ -1,12 +1,10 @@
 import './style.css';
 
-function Repository() {
+function Repository({repo}) {
     return (
         <div className="repository">
-            <a className="repository__tittle" href="https://github.com/gaearon/react-hot-loader" target="_blank" rel="noreferrer">react-hot-loader</a>
-            <div className="repository__description">Tweak React components in real time. (Deprecated: use Fast Refresh
-                instead.
-            </div>
+            <a className="repository__tittle" href={repo.html_url} target="_blank" rel="noreferrer">{repo.name}</a>
+            <div className="repository__description">{repo.description}</div>
         </div>
     );
 }

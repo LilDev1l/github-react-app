@@ -2,15 +2,16 @@ import './style.css';
 import Profile from '../Profile';
 import Repositories from '../Repositories';
 
-function Account() {
+function Account({user, repos}) {
     return (
         <div className="account">
             <div className="account__container">
                 <div className="account__profile">
-                    <Profile/>
+                    <Profile user={user}/>
                 </div>
                 <div className="account__repositories">
-                    <Repositories/>
+                    <Repositories repos={repos}
+                                  totalRepos={user.public_repos}/>
                 </div>
             </div>
         </div>

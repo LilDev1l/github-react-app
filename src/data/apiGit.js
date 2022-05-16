@@ -7,7 +7,7 @@ const instance = axios.create({
     }
 })
 
-export default class ApiGitHub {
+export class ApiGitHub {
     static async get({url, query}) {
         try {
             const {data} = await instance.get(url, {params: query});
@@ -17,4 +17,9 @@ export default class ApiGitHub {
             return null;
         }
     }
+}
+
+export const Endpoints = {
+    user: (username) => `/users/${username}`,
+    repos: (username) => `/users/${username}/repos`
 }

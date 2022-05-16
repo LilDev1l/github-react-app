@@ -2,10 +2,10 @@ import back from './img/back.png';
 import forward from './img/forward.png';
 import './style.css';
 
-function Pagination() {
+function Pagination({totalRepos}) {
     return (
         <div className="pagination">
-            <div className="pagination__info">5-8 of 249 items</div>
+            <div className="pagination__info">5-8 of {totalRepos} items</div>
             <ul className="pagination__pages">
                 <a href="#" className="pagination__navigate pagination__navigate_back">
                     <img src={back} alt="Back"/>
