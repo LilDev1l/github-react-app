@@ -20,6 +20,7 @@
 .pagination__navigate a {
     display: block;
     height: 100%;
+    cursor: pointer;
 }
 .pagination__navigate_back {
     background-image: url('./img/back.png');
@@ -30,6 +31,7 @@
     column-gap: 1.14em;
 }
 .page__item {
+    cursor: pointer;
 }
 .page__link {
     color: #808080;
@@ -39,9 +41,11 @@
     text-align: center;
     background: #0064EB;
     border-radius: 0.214em;
+    cursor: default;
 }
 .page__item_current a {
     color: #fff;
+    cursor: default;
 }
 .pagination__navigate_forward {
     background-image: url('./img/forward.png');
