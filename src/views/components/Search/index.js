@@ -2,14 +2,14 @@ import {useState} from 'react';
 import search from './img/search.png';
 import './style.css';
 
-function Search({onloadData}) {
+function Search(props) {
     const [username, setUsername] = useState('');
 
     const submitHandler = (event) => {
         event.preventDefault();
 
         if(username.trim()) {
-            onloadData(username);
+            props.onLoadUser(username);
         }
     }
 

@@ -2,3 +2,6 @@
     flex: 1 1 auto;
     background-color: #E5E5E5;
 }
+.main__container {
+    height: 100%;
+}

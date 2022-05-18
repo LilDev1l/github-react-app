@@ -1,9 +1,11 @@
 import './style.css';
 
-function Main({children, ...props}) {
+function Main({children}) {
     return (
         <main className="main">
-            {children}
+            <div className="main__container">
+                {children}
+            </div>
         </main>
     );
 }

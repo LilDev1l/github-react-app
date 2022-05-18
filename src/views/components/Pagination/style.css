@@ -1,38 +1,48 @@
 .pagination {
-    font-size: 0.875em;
+    font-size: 0.875rem;
     line-height: 1.5em;
     color: #808080;
     display: flex;
     align-items: center;
     gap: 1.14em;
     flex-wrap: wrap-reverse;
-    justify-content: flex-end;
+    justify-content: center;
 }
 .pagination__info {
 
 }
 .pagination__navigate {
+    height: 1.71em;
+    width: 1.71em;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.pagination__navigate a {
+    display: block;
+    height: 100%;
 }
 .pagination__navigate_back {
+    background-image: url('./img/back.png');
 }
 .pagination__pages {
     display: flex;
     align-items: center;
     column-gap: 1.14em;
 }
-.page {
+.page__item {
 }
 .page__link {
     color: #808080;
 }
-.page_current {
+.page__item_current {
     width: 1.5em;
+    text-align: center;
     background: #0064EB;
     border-radius: 0.214em;
-    text-align: center;
 }
-.page_current a {
+.page__item_current a {
     color: #fff;
 }
 .pagination__navigate_forward {
+    background-image: url('./img/forward.png');
 }

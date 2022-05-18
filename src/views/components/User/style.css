@@ -1,25 +1,24 @@
-.account {
-    height: 100%;
-    padding: 28px 0;
-}
-
-.account__container {
+.user {
     height: 100%;
     display: flex;
     column-gap: 85px;
-    padding: 0 30px;
+    padding: 28px 15px;
 }
 
-.account__profile {
+.user__profile {
     flex: 0 1 auto;
 }
 
-.account__repositories {
+.user__repositories {
+    flex: 1 1 0.768%;
+}
+
+.user__repo-not-found {
     flex: 1 1 0.768%;
 }
 
 @media (max-width: 62em) {
-    .account__container {
+    .user {
         row-gap: 30px;
         flex-direction: column;
     }

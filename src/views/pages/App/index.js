@@ -2,31 +2,48 @@ import {useState} from 'react';
 import './style.css';
 import Header from '../../components/Header';
 import Main from '../../components/Main';
-import Account from '../../components/Account';
+import User from '../../components/User';
 import {ApiGitHub, Endpoints} from '../../../data/apiGit';
+import Loader from '../../components/Loader';
+import Init from '../Init';
+import UserNotFound from '../UserNotFound';
 
-function App() {
+export default function App() {
     const [user, setUser] = useState(null);
-    const [repos, setRepos] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const [loaded, setLoaded] = useState(false);
 
-    const loadData = async (username) => {
-        const [user, repos] = await Promise.all([
-            ApiGitHub.get({url: Endpoints.user(username)}),
-            ApiGitHub.get({url: Endpoints.repos(username), query: {per_page: 10}})
-        ]);
+    const onloadUser = async (username) => {
+        setLoading(true);
+
+        const user = await ApiGitHub.get({url: Endpoints.user(username)});
         setUser(user);
-        setRepos(repos);
+
+        setLoading(false);
+        setLoaded(true);
     }
 
     return (
         <div className="wrapper">
-            <Header onloadData={loadData}/>
+            <Header onLoadUser={onloadUser}/>
             <Main>
-
-                {user && <Account user={user} repos={repos}/>}
+                {loading && <Loader/>}
+                {shouldShowInit(loading, loaded) && <Init/>}
+                {shouldShowUser(loading, loaded, user) && <User user={user}/>}
+                {shouldShowUserNotFound(loading, loaded, user) && <UserNotFound/>}
             </Main>
         </div>
     );
 }
 
-export default App;
+function shouldShowInit(loading, loaded) {
+    return !loading && !loaded;
+}
+
+function shouldShowUser(loading, loaded, user) {
+    return !loading && loaded && user !== null;
+}
+
+function shouldShowUserNotFound(loading, loaded, user) {
+    return !loading && loaded && user === null;
+}

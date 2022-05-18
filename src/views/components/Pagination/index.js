@@ -1,26 +1,28 @@
-import back from './img/back.png';
-import forward from './img/forward.png';
+import ReactPaginate from 'react-paginate';
 import './style.css';
 
-function Pagination({totalRepos}) {
+function Pagination({paginationInfo, pageCount, onChangeCurrentPage}) {
+    const handlePageClick = (event) => {
+        const currentPage = event.selected + 1;
+        onChangeCurrentPage(currentPage);
+    };
+
     return (
-        <div className="pagination">
-            <div className="pagination__info">5-8 of {totalRepos} items</div>
-            <ul className="pagination__pages">
-                <a href="#" className="pagination__navigate pagination__navigate_back">
-                    <img src={back} alt="Back"/>
-                </a>
-
-                <li className="page"><a href="#" className="page__link">1</a></li>
-                <li className="page page_current"><a href="#" className="page__link">2</a></li>
-                <li className="page"><a href="#" className="page__link">3</a></li>
-                <li className="page">...</li>
-                <li className="page"><a href="#" className="page__link">10</a></li>
-
-                <a href="#" className="pagination__navigate pagination__navigate_forward">
-                    <img src={forward} alt="Forward"/>
-                </a>
-            </ul>
+        <div className='pagination'>
+            <div className='pagination__info'>{paginationInfo}</div>
+            <ReactPaginate breakLabel='...'
+                           nextLabel=''
+                           onPageChange={handlePageClick}
+                           marginPagesDisplayed={1}
+                           pageRangeDisplayed={3}
+                           pageCount={pageCount}
+                           previousLabel=''
+                           containerClassName='pagination__pages'
+                           pageClassName='page__item'
+                           pageLinkClassName='page__item'
+                           previousClassName='pagination__navigate pagination__navigate_back'
+                           nextClassName='pagination__navigate pagination__navigate_forward'
+                           activeClassName='page__item_current'/>
         </div>
     );
 }
