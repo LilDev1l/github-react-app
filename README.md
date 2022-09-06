@@ -1,6 +1,6 @@
 # Demo
 
-[Click to look at demo](https://task-for-paralect.netlify.app/)
+[Click to look at demo](https://github-react-app1.netlify.app/)
 
 # Getting Started with Create React App
 
